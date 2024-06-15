@@ -1,17 +1,20 @@
 @charset "utf-8";
 
 .all-link {
-  width: 70%;
-  max-width: 80%;
+  width: 930%;
+  max-width: 90%;
   margin-top: 75px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .link-category {
+  width: 500px;
   margin-top: 30px;
   margin-bottom: 30px;
   line-height: 15px;
+  margin-left: auto;
+  matgin-right: auto;
 }
 
 .link-category h2::after {
