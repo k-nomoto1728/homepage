@@ -7,7 +7,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  outline: 1px solid #eb5757;
 }
 
 ul,
@@ -26,7 +25,6 @@ body {
   font-size: 16px;
   color: #000000;
   line-height: 1;
-  /* background-color: #F1EEDC; */
   background-color: #FBF9F1;
 }
 
@@ -74,25 +72,21 @@ img {
 
 /* ボディのスタイル */
 .title {
-  background-image: url(../images/common/title.JPG);
-  margin-left: auto;
-  margin-right: auto;
-  width: 100vh;
   height: 250px;
+  background-image: url(../images/common/title.JPG);
   background-repeat: no-repeat;
   background-position: center center;
-  /* background-size: cover; */
-  object-fit: cover;
+  background-size: cover;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   color: #ffffff;
   text-shadow: 1px 1px 10px #4b2c14;
 }
 
-.title h1 {
+.title-text {
   font-family: "Kiwi Maru", serif;
-  font-size: 50px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -151,7 +145,7 @@ img {
   }
 
   .header-name {
-    font-size: 25px;
+    font-size: 18px;
   }
 
   .header-site-menu {
@@ -187,13 +181,9 @@ img {
 
   /* メインのスタイル */
 
-  .title {
-    margin-top: 50px;
-  }
-  
   .main {
-    height: 100vh;
-    width: 100vh;
+    padding-top: 50px;
+    height: calc(100vw - 50px - 30px);
   }
 
   .main-image {
@@ -202,43 +192,8 @@ img {
   }
 
   .main-image img {
-    height: 250px;
+    height: 100px;
     object-fit: cover;
-  }
-
-  .news {
-    height: calc(100vh - 50px - 250px - 30px);
-    width: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-  }
-  
-  .oshirase {
-    height: 80px;
-    width: 100%;
-    text-align: center;
-    font-family: "Kiwi Maru", serif;
-  }
-  
-  .oshirase h2::after {
-    content: '';
-    display: block;
-    width: 36px;
-    height: 3px;
-    background-color: #000000;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .event {
-    height: 200px;
-    font-family: "Zen Maru Gothic", serif;
-    margin-left: 50px;
-    margin-right: 50px;
-    overflow-y: scroll;
-    line-height: 2;
   }
 
   /* フッターのレイアウト */
@@ -248,10 +203,6 @@ img {
     left: 0;
     right: 0;
     height: 30px;
-  }
-
-  .last-update {
-    font-size: 10px;
   }
 
   .copyright {

@@ -41,14 +41,16 @@
   margin-top: 10px;
   margin-bottom: 10px;
   color: inherit;
-  text-decoration: underline dotted;
+  text-decoration: underline;
   font-size: 15px;
   font-family: "Zen Maru Gothic", serif;
 }
 
 @media (max-width: 800px) {
+
   .all-link {
     width: 500px;
     margin-top: 45px;
   }
+
 }
