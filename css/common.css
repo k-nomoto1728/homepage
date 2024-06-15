@@ -74,14 +74,16 @@ img {
 
 /* ボディのスタイル */
 .title {
-  max-width: 1200px;
+  background-image: url(../images/common/title.JPG);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vh;
   height: 250px;
-  background-image: url(https://github.com/k-nomoto1728/homepage/blob/main/images/common/title.JPG?raw=true);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  /* background-size: cover; */
+  object-fit: cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #ffffff;
