@@ -74,6 +74,7 @@ img {
 
 /* ボディのスタイル */
 .title {
+  max-width: 1200px;
   height: 250px;
   background-image: url(https://github.com/k-nomoto1728/homepage/blob/main/images/common/title.JPG?raw=true);
   background-repeat: no-repeat;
