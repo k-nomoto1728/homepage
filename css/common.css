@@ -169,7 +169,7 @@ img {
     display: block;
     width: 44px;
     height: 34px;
-    background-image: url(https://github.com/k-nomoto1728/homepage/blob/main/images/common/icon-menu.png?raw=true);
+    background-image: url("https://github.com/k-nomoto1728/homepage/blob/main/images/common/icon-menu.png?raw=true");
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
