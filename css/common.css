@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+/* ブラウザの既定スタイル解除 */
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* 主なタグのスタイル */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1;
+  /* background-color: #F1EEDC; */
+  background-color: #FBF9F1;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ヘッダーのスタイル */
+
+.header-inner {
+  max-width: 1200px;
+  height: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-menu-button {
+  display: none;
+}
+
+.header-name {
+  display: block;
+  font-family: "Kiwi Maru", serif;
+  font-size: 30px;
+}
+
+.site-menu ul {
+  display: flex;
+}
+
+.site-menu ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.site-menu ul li a {
+  font-family: "Kiwi Maru", serif;
+  font-weight: bold;
+}
+
+/* ボディのスタイル */
+.title {
+  height: 250px;
+  background-image: url(../images/common/title.JPG);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.title h1 {
+  font-family: "Kiwi Maru", serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* フッターのスタイル */
+
+.footer {
+  color: #000000;
+  background-color: #E5E1DA;
+  height: 30px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.last-update {
+  font-family: "Zen Maru Gothic", serif;
+}
+
+/* レスポンシブデザイン */
+
+@media (max-width: 800px) {
+  /* ヘッダーのスタイル */
+  .site-menu ul {
+    display: block;
+    text-align: center;
+  }
+
+  .site-menu li {
+    margin-top: 20px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #FBF9F1;
+    height: 50px;
+    z-index: 10;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    /* ハンバーガーメニュー用 */
+    position: relative;
+  }
+
+  .header-name {
+    font-size: 25px;
+  }
+
+  .header-site-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: #736E62;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: none;
+  }
+
+  /* ハンバーガーメニュー */
+  .header-site-menu.is-show {
+    display: block;
+  }
+
+  .toggle-menu-button {
+    display: block;
+    width: 44px;
+    height: 34px;
+    background-image: url(../images/common/icon-menu.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+  }
+
+  /* メインのスタイル */
+
+  .title {
+    margin-top: 50px;
+  }
+  
+  .main {
+    height: 100vh;
+    width: 100vh;
+  }
+
+  .main-image {
+    height: 250px;
+    width: 100vh;
+  }
+
+  .main-image img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .news {
+    height: calc(100vh - 50px - 250px - 30px);
+    width: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+  
+  .oshirase {
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    font-family: "Kiwi Maru", serif;
+  }
+  
+  .oshirase h2::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #000000;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .event {
+    height: 200px;
+    font-family: "Zen Maru Gothic", serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    overflow-y: scroll;
+    line-height: 2;
+  }
+
+  /* フッターのレイアウト */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+  }
+
+  .last-update {
+    font-size: 10px;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
+
+}
