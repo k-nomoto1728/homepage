@@ -1,1 +1,48 @@
 @charset "utf-8";
+
+.CV-content {
+  width: 930px;
+  max-width: 90%;
+  margin-top: 75px;
+  font-family: "Zen Maru Gothic", serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.CV-content h2 {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.CV-content h2::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: #000000;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.CV-content li {
+  font-size: 15px;
+  line-height: 28px;
+  margin-top: 8px;
+  line-height: 1.2;
+}
+
+@media (max-width: 800px) {
+
+  .CV-content {
+    width: 500px;
+    margin-top: 45px;
+  }
+
+  .CV-content li {
+    font-size: 12px;
+  }
+
+}

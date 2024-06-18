@@ -22,6 +22,8 @@ a {
 
 body {
   font-family: sans-serif;
+  /* font-family: "Kiwi Maru", serif; */
+  /* font-weight: normal; */
   font-size: 16px;
   color: #000000;
   line-height: 1;
@@ -73,6 +75,7 @@ img {
 /* ボディのスタイル */
 .title {
   height: 250px;
+  /* background-image: url(../images/common/title.JPG); */
   background-image: url("https://github.com/k-nomoto1728/homepage/blob/main/images/common/title.JPG?raw=true");
   background-repeat: no-repeat;
   background-position: center center;
@@ -169,6 +172,7 @@ img {
     display: block;
     width: 44px;
     height: 34px;
+    /* background-image: url(../images/common/icon-menu.png); */
     background-image: url("https://github.com/k-nomoto1728/homepage/blob/main/images/common/icon-menu.png?raw=true");
     background-size: 50%;
     background-position: center;
