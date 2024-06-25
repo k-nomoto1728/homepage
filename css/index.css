@@ -2,9 +2,9 @@
 
 .oshirase {
   text-align: center;
-  height: 40px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  height: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .oshirase h2::after {
@@ -18,7 +18,7 @@
 }
 
 .news {
-  height: calc(100vh - 100px - 200px - 180px - 30px);
+  height: calc(100vh - 100px - 200px - 200px - 30px);
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;

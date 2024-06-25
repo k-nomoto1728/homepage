@@ -2,8 +2,8 @@
 
 .link-category {
   max-width: 80%;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 50px;
+  margin-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -21,21 +21,6 @@
   background-color: #000000;
   margin-left: auto;
   margin-right: auto;
-}
-
-.link-category ul li {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.link-category dl dt {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-/* これは後でcommonにまとめる */
-.link {
-  text-decoration: underline;
 }
 
 @media (max-width: 800px) {

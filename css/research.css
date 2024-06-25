@@ -2,8 +2,8 @@
 
 .research-content {
   max-width: 80%;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 50px;
+  margin-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -21,25 +21,6 @@
   background-color: #000000;
   margin-left: auto;
   margin-right: auto;
-}
-
-.research-content ol {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  list-style-type: decimal-leading-zero;
-}
-
-.research-content ol li {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-/* これは後でcommonにまとめる */
-.link { 
-  /* display: block; */
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-decoration: underline;
 }
 
 @media (max-width: 800px) {

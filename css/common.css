@@ -7,6 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* outline:1px solid #f00; */
 }
 
 ul,
@@ -16,10 +17,12 @@ ol {
 
 /* 主なタグのスタイル */
 a {
-  /* display: inline; */
-  color: inherit;
-  text-decoration: none;
+  color: #3F72AF;
+  font-weight: bold;
+  text-decoration: dashed underline;
 }
+
+/* https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e */
 
 body {
   font-family: "Zen Maru Gothic", serif;
@@ -27,7 +30,7 @@ body {
   font-weight: normal;
   color: #000000;
   line-height: 1;
-  background-color: #FBF9F1;
+  background-color: #F9F7F7;
 }
 
 img {
@@ -48,15 +51,15 @@ p {
   line-height: 1.5;
 }
 
-li {
-  font-size: 18px;
+ul, dl, ol {
+  line-height: 1.5;
 }
 
-dt {
-  font-size: 18px;
+ol {
+  list-style-type: decimal-leading-zero;
 }
 
-dd {
+li, dt, dd {
   font-size: 18px;
 }
 
@@ -72,6 +75,18 @@ dd {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header-inner a {
+  text-decoration: none;
+  font-weight: normal;
+  color: #000000;
+}
+
+.site-menu ul li a {
+  text-decoration: none;
+  font-weight: normal;
+  color: #000000;
 }
 
 .toggle-menu-button {
