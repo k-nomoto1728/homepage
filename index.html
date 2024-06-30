@@ -25,47 +25,71 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <header>
+
+    <!-- 名前(タイトル) -->
     <div class="header-inner">
 
-      <!-- 名前(タイトル) -->
-      <a class="header-name" href="./index.html">野本慶一郎 / NOMOTO Keiichiro</a>
-
-      <!-- メニューボタン(スマホ用) -->
-      <button class="toggle-menu-button"></button>
-
-      <!-- ナビゲーションエリア -->
-      <div class="header-site-menu">
-        <nav class="site-menu">
-          <ul>
-            <li><a href="./profile.html">PROFILE</a></li>
-            <li><a href="./cv.html">CV</a></li>
-            <li><a href="./research.html">RESEARCH</a></li>
-            <li><a href="./note.html">NOTE</a></li>
-            <li><a href="./link.html">LINK</a></li>
-          </ul>
-        </nav>
+      <div class="header-title">
+        <a class="header-name" href="./index.html">NOMOTO's Official Website</a>
+        <!-- メニューボタン(スマホ用) -->
       </div>
-    
+
+      <button class="toggle-menu-button"></button>
     </div>
+
+    <!-- ナビゲーションエリア -->
+    <div class="header-menu">
+      <nav class="menu">
+        <ul>
+          <li class="select"><a href="./index.html">Top</a></li>
+          <li><a href="./profile.html">Profile</a></li>
+          <li><a href="./cv.html">CV</a></li>
+          <li><a href="./research.html">Research</a></li>
+          <li><a href="./education.html">Education</a></li>
+          <li><a href="./note.html">Note</a></li>
+          <li><a href="./link.html">Link</a></li>
+        </ul>
+      </nav>
+    </div>
+    
   </header>
 
   <main>
 
-    <!-- 上部画像 -->
-    <div class="title">
-      <div class="title-text">
-        <h1></h1>
-      </div>
+    <div class="short-profile">
+      <dl>
+        <dt>野本 慶一郎 / NOMOTO Keiichiro</dt>
+        <dd>所属: 株式会社光電製作所</dd>
+        <dd>研究テーマ: 整数論, 同種写像暗号</dd>
+        <dd>連絡先: nomotokeiichiro"at"gmail.com</dd>
+        <dd>生年月日: 1995年9月8日</dd>
+        <dd>趣味: ビール, ルービックキューブ</dd>
+      </dl>
+      <img src="images/index/myself.jpg" alt="顔写真">
     </div>
 
     <!-- お知らせ欄 -->
-    <div class="oshirase"><h2>News</h2></div>
+    <div class="news-background">
     <div class="news">
+
+      <h1 class="category">News</h1>
+
+      <div class="event">
+        <div class="event-date">
+          <p>2024.06.30</p>
+        </div>
+        <div class="event-content">
+          <p>ページデザインを大幅に変更しました.</p>
+        </div>
+      </div>
 
       <div class="event">
         <div class="event-date">
@@ -82,7 +106,7 @@
           <p>2024.06.22</p>
         </div>
         <div class="event-content">
-          <p>また日付が変わりました. News欄を少しいじってみました. 機能性や視認性を無視して, ただ自分の興味のままにデザインしています. ご了承ください.</p>
+          <p>News欄を少しいじってみました.</p>
         </div>
       </div>
 
@@ -130,76 +154,14 @@
           <p>ホームページを作り始めました.</p>
         </div>
       </div>
-
-      <div class="event">
-        <div class="event-date">
-          <p>2024.06.13</p>
-        </div>
-        <div class="event-content">
-          <p>テストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすと</p>
-        </div>
-      </div>
-
-      <div class="event">
-        <div class="event-date">
-          <p>2024.06.12</p>
-        </div>
-        <div class="event-content">
-          <p>テストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすと</p>
-        </div>
-      </div>
-
-      <div class="event">
-        <div class="event-date">
-          <p>2024.06.11</p>
-        </div>
-        <div class="event-content">
-          <p>テストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすと</p>
-        </div>
-      </div>
-
-      <div class="event">
-        <div class="event-date">
-          <p>2024.06.10</p>
-        </div>
-        <div class="event-content">
-          <p>テストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすと</p>
-        </div>
-      </div>
-
-      <div class="event">
-        <div class="event-date">
-          <p>2024.06.09</p>
-        </div>
-        <div class="event-content">
-          <p>テストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすと</p>
-        </div>
-      </div>
-
-      <div class="event">
-        <div class="event-date">
-          <p>2024.06.08</p>
-        </div>
-        <div class="event-content">
-          <p>テストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすと</p>
-        </div>
-      </div>
-
-      <div class="event">
-        <div class="event-date">
-          <p>2024.06.07</p>
-        </div>
-        <div class="event-content">
-          <p>テストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすとテストtestてすと</p>
-        </div>
-      </div>
-
+  
+    </div>
     </div>
 
   </main>
 
   <footer>
-    <p><small>&copy;&nbsp; NOMOTO Keiichiro 2024- All Rights Reserved.</small></p>
+    <p><small>Copyright &copy;&nbsp; NOMOTO Keiichiro All Rights Reserved.</small></p>
   </footer>
 
 </body>

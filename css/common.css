@@ -5,7 +5,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* outline: 1px solid #f00; */
 }
 
 ul, ol {
@@ -16,17 +15,14 @@ ul, ol {
 a {
   color: #3F72AF;
   font-weight: bold;
-  text-decoration: dashed underline;
+  text-decoration: solid underline;
 }
 
-/* https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e */
-
 body {
-  font-family: "Zen Maru Gothic", serif;
   font-weight: normal;
   color: #000000;
   line-height: 1;
-  background-color: #F9F7F7;
+  background-color: #FFFFFF;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -35,42 +31,54 @@ img {
   max-width: 100%;
 }
 
-h2 {
-  font-size: 28px;
-  line-height: 1.5;
+li {
+  text-indent: -1em;
+  padding-left: 1em;
 }
 
-h2::after {
-  margin-top: 10px;
-}
-
-ol {
-  list-style-type: decimal-leading-zero;
+li::before {
+  content: "・"
 }
 
 /* ヘッダーのスタイル */
 
-.header-inner {
-  max-width: 1500px;
+header {
+  max-width: 1800px;
   height: 100px;
+  background-color: #7FC7D9;
+  font-family: "Klee One", serif;
+}
+
+header a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.header-inner {
+  width: 100%;
+  height: 60px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  background-color: #FFFFFF;
 }
 
-.header-inner a {
-  text-decoration: none;
-  font-weight: normal;
-  color: #000000;
+.header-title {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
-.site-menu ul li a {
+.header-name {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
   text-decoration: none;
-  font-weight: normal;
+  font-size: 30px;
   color: #000000;
 }
 
@@ -78,51 +86,49 @@ ol {
   display: none;
 }
 
-.header-name {
-  display: block;
-  font-size: 30px;
+.header-menu {
+  height: 40px;
 }
 
-.site-menu ul {
+.menu {
+  width: 100%;
+  height: 100%;
   display: flex;
+  justify-content: center;
 }
 
-.site-menu ul li {
-  margin-left: 20px;
-  margin-right: 20px;
+.menu ul {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.site-menu ul li a {
-  font-weight: bold;
+.menu ul li {
+  width: 100%;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  text-indent: 0;
 }
+
+.menu ul li::before {
+  content: none;
+}
+
 
 /* ボディのスタイル */
 
 main {
-  max-width: 1500px;
+  max-width: 1800px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.title {
-  max-width: 100%;
-  height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url("https://github.com/k-nomoto1728/homepage/blob/main/images/common/title.JPG?raw=true");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  text-shadow: 1px 1px 10px #4b2c14;
-}
-
-.title-text h1 {
-  font-family: "Kiwi Maru", serif;
-  font-size: 50px;
+  font-family: "Zen Maru Gothic", serif;
 }
 
 /* フッターのスタイル */
@@ -133,6 +139,7 @@ footer {
   margin-right: auto;
   color: #000000;
   text-align: center;
+  font-family: "Klee One", serif;
 }
 
 footer p {
@@ -169,13 +176,18 @@ footer p {
   }
   
   /* ヘッダーのスタイル */
-  .site-menu ul {
+  .menu ul {
     display: block;
     text-align: center;
+    width: 100%;
   }
 
-  .site-menu li {
-    margin-top: 20px;
+  .menu ul li {
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   header {
@@ -183,38 +195,44 @@ footer p {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #FBF9F1;
+    background-color: #FFFFFF;
     height: 50px;
     z-index: 10;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   }
 
   .header-inner {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     height: 100%;
     /* ハンバーガーメニュー用 */
     position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-title {
+    height: 50px;
   }
 
   .header-name {
     font-size: 16px;
+    height: 50px;
   }
 
-  .header-site-menu {
+  .header-menu {
     position: absolute;
+    height: 350px;
     top: 100%;
     left: 0;
     right: 0;
-    color: #ffffff;
-    background-color: #736E62;
-    padding-top: 30px;
-    padding-bottom: 50px;
+    color: #FFFFFF;
+    background-color: #7FC7D9;
     display: none;
   }
 
   /* ハンバーガーメニュー */
-  .header-site-menu.is-show {
+  .header-menu.is-show {
     display: block;
   }
 

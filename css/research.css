@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.select {
+  background-color: #D9C77F;
+}
+
 .research-content {
   max-width: 80%;
   margin-top: 50px;
@@ -9,18 +13,8 @@
 }
 
 .research-content h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.research-content h2::after {
-  content: '';
-  display: block;
-  width: 36px;
-  height: 3px;
-  background-color: #000000;
-  margin-left: auto;
-  margin-right: auto;
+  border-bottom: 5px solid #7FC7D9;
+  margin-bottom: 25px;
 }
 
 @media (max-width: 800px) {
