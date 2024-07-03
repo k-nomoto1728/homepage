@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
     var $button = document.querySelector('.toggle-menu-button');
-    var $menu = document.querySelector('.header-menu');
+    var $menu = document.querySelector('.header-bottom');
     $button.addEventListener('click', function () {
         if ($menu.classList.contains('is-show')) {
             $menu.classList.remove('is-show');

@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-.select {
-  background-color: #D9C77F;
-}
-
 .category {
   display: flex;
   justify-content: space-between;
@@ -55,7 +51,7 @@
   }
 
   .category-text {
-    padding-left: 0;
+    padding-right: 0;
   }
 
   .reverse .category-text {
