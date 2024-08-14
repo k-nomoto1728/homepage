@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <!-- 必須タグ -->
+  <meta charset="UTF-8">
+  <title>NOTE|野本慶一郎のページ</title>
+
+  <!-- 任意タグ -->
+  <meta name="author" content="野本慶一郎">
+  <meta name="description" content="ノート">
+
+  <!-- 端末調整 -->
+  <meta name="viewport" content="width=device-width">
+  <script src=".../js/toggle-menu.js"></script>
+
+  <!-- css -->
+  <link href="../../../css/common.css" rel="stylesheet">
+  <link href="../../../css/note.css" rel="stylesheet">
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&family=Noto+Sans+JP:wght@100..900&family=RocknRoll+One&display=swap" rel="stylesheet">
+
+  <!-- コードのシンタックスハイライト -->
+  <link rel="stylesheet" href="../../../css/vs2015.css">
+  <script src="../../../js/highlight.min.js"></script>
+  <script src="../../../js/languages/python.js"></script>
+  <script src="../../../js/languages/latex.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+</head>
+
+<body>
+
+  <header>
+
+    <div class="header-top">
+      <a class="page-title" href=".../index.html">NOMOTO's Official Website</a>
+      <button class="toggle-menu-button"></button>
+    </div>
+    
+    <div class="header-bottom">
+      <nav class="menu">
+        <ul>
+          <li><a href="../../../index.html">Top</a></li>
+          <li><a href="../../../profile/index.html">Profile</a></li>
+          <li><a href="../../../cv/index.html">CV</a></li>
+          <li><a href="../../../research/index.html">Research</a></li>
+          <li><a href="../../../education/index.html">Education</a></li>
+          <li class="select"><a href="../../../note/index.html">Note</a></li>
+          <li><a href="../../../link/index.html">Link</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+  </header>
+
+  <main>
+
+    <div class="article">
+
+      <h1>参照した数式だけ数式番号を表示</h1>
+
+      <h2>ソースコード</h2>
+
+      <pre>
+      <code class="language-tex">
+        \mathtoolsset{showonlyrefs=true}
+      </code>
+      </pre>
+
+      <h2>解説</h2>
+
+      <p>
+        通常, 参照したい数式には\begin{align}hoge\end{align}と書き,
+        参照したくない数式は数式番号を付けないように\begin{align*}hoge\end{align*}と書く.
+        しかし, やっぱり後でこの式使いたいという場面が来たときにソースコードを直していくのは面倒である.
+        そこでshowonlyrefsを設定すると, 全ての数式環境を\begin{align}hoge\end{align}のみで統一することができ, 手間が省ける.
+        このマクロは, 本文中において\eqrefで参照した際に該当する数式に式番号を振ってくれるという優れものである.
+      </p>
+
+    </div>
+  </main>
+
+  <footer>
+    <p><small>Copyright &copy;&nbsp; NOMOTO Keiichiro All Rights Reserved.</small></p>
+  </footer>
+
+</body>
+
+</html>

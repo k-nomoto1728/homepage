@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+
+.short-profile {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-flow: column;
+  justify-content:space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  background-image: url(../img/top/elliptic_curve3.png);
+  background-repeat: no-repeat;
+  background-size: auto 250px;
+  background-position: right;
+}
+
+.short-profile-top {
+  display: flex;
+  flex-flow: column-reverse;
+  height: 125px;
+  width: 100%;
+  padding-left: 100px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #000000;
+}
+
+.short-profile-bottom {
+  display: flex;
+  flex-flow: column;
+  height: 125px;
+  width: 100%;
+  padding-left: 100px;
+  padding-top: 5px;
+}
+
+.short-profile-top p {
+  font-size: 35px;
+  vertical-align: bottom;
+  font-family: "Kaisei Tokumin", serif;
+  font-weight: 400;
+}
+
+.short-profile-bottom p {
+  font-size: 18px;
+  font-family: "Kaisei Tokumin", serif;
+  font-weight: 400;
+}
+
+.News {
+  position: relative;
+	font-size: 26px;
+	text-align: center;
+  line-height: 60px;
+  margin-bottom:30px;
+}
+
+.News::after {
+  content: '';
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 6px 0 6px;
+	border-color: #00ABEA rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+}
+
+.events {
+  height: calc(100vh - 100px - 1px - 310px - 90px - 30px);
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
+}
+
+.event {
+  display: flex;
+  height: 60px;
+  border-top: 1px solid #00ABEA;
+  align-items: center;
+}
+
+.event-date {
+  margin-left: 10px;
+  margin-right: 30px;
+  background-color: #00ABEA;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.event-date p {
+  color: #FFFFFF;
+  /* font-size: 14px; */
+}
+
+/* .event-content p {
+  font-size: 15px;
+} */
+
+
+
+/* レスポンシブデザイン */
+
+@media (max-width: 1000px) {
+  
+  .short-profile {
+    width: 100%;
+    height: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-size: auto 250px;
+    background-color:rgba(255,255,255,0.8);
+    background-blend-mode:lighten;
+  }
+
+  .short-profile-top {
+    height: 125px;
+    padding-left: 28px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+  
+  .short-profile-bottom {
+    height: 125px;
+    padding-left: 28px;
+  }
+
+  .short-profile-top p {
+    font-size: 20px;
+  }
+
+  .short-profile-bottom p {
+    font-size: 16px;
+  }
+
+  .News {
+    /* font-size: 18px; */
+    line-height: 60px;
+    margin-bottom:30px;
+  }
+
+  .events {
+    height: calc(100vh - 50px - 1px - 310px - 90px - 30px);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+  }
+
+  .event {
+    height: 80px;
+  }
+  
+  .event-date {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  
+  /* .event-date p {
+    font-size: 16px;
+  } */
+  
+  .event-content p {
+    /* font-size: 14px; */
+    padding-right: 10px;
+  }
+
+}

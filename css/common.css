@@ -1,0 +1,280 @@
+@charset "utf-8";
+
+/* ブラウザの既定スタイル解除 */
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px red solid; */
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* 主なタグのスタイル */
+
+body {
+  background-color: #FFFFFF;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 1800px;
+}
+
+a {
+  color: #3F72AF;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+li::before {
+  content: "・"
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+
+/* ヘッダーのスタイル */
+
+header {
+  max-width: 1800px;
+  height: 100px;
+}
+
+header a {
+  text-decoration: none;
+  /* color: #FFFFFF; */
+}
+
+.header-top {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.page-title {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  font-size: 30px;
+  color: #000000;
+  font-family: "RocknRoll One", sans-serif;
+  font-family: "Kaisei Tokumin", serif;
+}
+
+.toggle-menu-button {
+  position: absolute;
+  right: 0;
+  display: none;
+  background-image: url("../img/common/icon-menu.png?raw=true");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+.header-bottom {
+  width: 100%;
+  height: calc(100px - 60px);
+  justify-content: center;
+  background-color: #00ABEA;
+  font-family: "RocknRoll One", sans-serif;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu ul li {
+  width: 150px;
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  position: relative;
+  line-height: 40px;
+}
+
+.menu ul li::before {
+  content: none;
+}
+
+.select {
+  background-color: #EBB400;
+}
+
+.menu ul li a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-left: 1em;
+}
+
+.menu ul li a {
+  color: #FFFFFF;
+}
+
+/* ボディのスタイル */
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* フッターのスタイル */
+
+footer {
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+/* レスポンシブデザイン */
+
+@media (max-width: 800px) {
+
+  /* 主なタグのスタイル */
+
+  body {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+  
+  h2 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  ul, dl, ol {
+    line-height: 1.8;
+  }
+
+  li, dt, dd {
+    font-size: 12px;
+  }
+  
+  /* ヘッダーのスタイル */
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 10;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-top {
+    height: 50px;
+  }
+
+  .page-title {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+  }
+
+  /* ハンバーガーメニュー */
+  .header-bottom.is-show {
+    display: block;
+  }
+
+  .toggle-menu-button {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+
+  .header-bottom {
+    height: calc(50px * 7);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+
+  .menu ul {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu ul li {
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 50px;
+  }
+  
+  /* メインのスタイル */
+
+  main {
+    max-width: 800px;
+    padding-top: 50px;
+  }
+
+  /* フッターのレイアウト */
+  footer p {
+    height: 30px;
+    font-size: 10px;
+  }
+
+}
