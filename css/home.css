@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+.profile-container {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-flow: column;
+  justify-content:space-between;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  background-image: url(../img/top/elliptic_curve3.png);
+  background-repeat: no-repeat;
+  background-size: auto 250px;
+  background-position: right;
+}
+
+.profile-name {
+  display: flex;
+  flex-flow: column-reverse;
+  height: 125px;
+  width: 100%;
+  padding-left: 100px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #000000;
+  font-size: 35px;
+  vertical-align: bottom;
+  font-family: "Kaisei Tokumin", serif;
+  font-weight: 400;
+}
+
+.profile-details {
+  display: flex;
+  flex-flow: column;
+  height: 125px;
+  width: 100%;
+  padding-left: 100px;
+  padding-top: 5px;
+}
+
+.research-keywords {
+  font-size: 18px;
+  font-family: "Kaisei Tokumin", serif;
+  font-weight: 400;
+}
+
+.contact-info {
+  font-size: 18px;
+  font-family: "Kaisei Tokumin", serif;
+  font-weight: 400;
+}
+
+/* 試行錯誤中 */
+/* .profile-container {
+  background-color: rgba(0, 0, 0, 0.5);
+} */
+/* .profile-name {
+  color: #00ABEA;
+}
+.research-keywords {
+  color: #00ABEA;
+}
+.contact-info {
+  color: #00ABEA;
+} */
+/* ここまで */
+
+.news-title {
+  position: relative;
+	font-size: 26px;
+	text-align: center;
+  line-height: 60px;
+  margin-bottom:30px;
+}
+
+.news-title::after {
+  content: '';
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 6px 0 6px;
+	border-color: #00ABEA rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+}
+
+.news-container {
+  height: calc(100vh - 100px - 250px - 90px - 30px);
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
+}
+
+.news-item {
+  display: flex;
+  height: 60px;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  align-items: center;
+}
+
+.news-date {
+  margin-left: 10px;
+  margin-right: 30px;
+  padding: 5px 3px 5px 3px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+/* .news-content {
+
+} */
+
+
+/* レスポンシブデザイン */
+
+@media (max-width: 1000px) {
+  
+  .profile-container {
+    width: 100%;
+    height: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-size: auto 250px;
+    background-color:rgba(255,255,255,0.8);
+    background-blend-mode:lighten;
+  }
+
+  .profile-name {
+    height: 125px;
+    padding-left: 28px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
+  
+  .profile-details {
+    height: 125px;
+    padding-left: 28px;
+  }
+
+  .profile-name {
+    font-size: 20px;
+  }
+
+  .research-keywords {
+    font-size: 16px;
+  }
+
+  .contact-info {
+    font-size: 16px;
+  }
+
+  .news-title {
+    font-size: 18px;
+    line-height: 60px;
+    margin-bottom:30px;
+  }
+
+  .news-container {
+    height: calc(100vh - 50px - 1px - 310px - 90px - 30px);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+  }
+
+  .news-item {
+    height: 80px;
+  }
+  
+  .news-date {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  
+  /* .event-date p {
+    font-size: 16px;
+  } */
+  
+  .news-content p {
+    /* font-size: 14px; */
+    padding-right: 10px;
+  }
+
+}

@@ -1,23 +1,6 @@
 @charset "utf-8";
 
-.note-category {
-  max-width: 80%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.note-category h1 {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  margin-bottom: 25px;
-  padding-left: 15px;
-  border-left: 8px solid #00ABEA;
-  background-color: #f8ffff;
-}
-
-.article {
+/* .article {
   max-width: 80%;
   margin-top: 50px;
   margin-bottom: 100px;
@@ -39,7 +22,7 @@
   margin-top: 25px;
   margin-bottom: 25px;
   padding-left: 15px;
-}
+} */
 
 @media (max-width: 800px) {
 

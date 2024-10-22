@@ -13,11 +13,10 @@
 
   <!-- 端末調整 -->
   <meta name="viewport" content="width=device-width">
-  <script src="../../../js/toggle-menu.js"></script>
 
   <!-- css -->
-  <link href="../../../css/common.css" rel="stylesheet">
-  <link href="../../../css/note.css" rel="stylesheet">
+  <link href="/css/common.css" rel="stylesheet">
+  <link href="/css/section.css" rel="stylesheet">
 
   <!-- フォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,46 +24,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&family=Noto+Sans+JP:wght@100..900&family=RocknRoll+One&display=swap" rel="stylesheet">
 
   <!-- コードのシンタックスハイライト -->
-  <link rel="stylesheet" href="../../../css/vs2015.css">
-  <script src="../../../js/highlight.min.js"></script>
-  <script src="../../../js/languages/python.js"></script>
-  <script src="../../../js/languages/latex.js"></script>
+  <link rel="stylesheet" href="/css/vs2015.css">
+  <script src="/js/highlight.min.js"></script>
+  <script src="/js/languages/python.js"></script>
+  <script src="/js/languages/latex.js"></script>
   <script>hljs.highlightAll();</script>
   
 </head>
 
 <body>
 
-  <header>
-
-    <div class="header-top">
-      <a class="page-title" href=".../index.html">NOMOTO's Official Website</a>
-      <button class="toggle-menu-button"></button>
-    </div>
-    
-    <div class="header-bottom">
-      <nav class="menu">
-        <ul>
-          <li><a href="../../../index.html">Top</a></li>
-          <li><a href="../../../profile/index.html">Profile</a></li>
-          <li><a href="../../../cv/index.html">CV</a></li>
-          <li><a href="../../../research/index.html">Research</a></li>
-          <li><a href="../../../education/index.html">Education</a></li>
-          <li class="select"><a href="../../../note/index.html">Note</a></li>
-          <li><a href="../../../link/index.html">Link</a></li>
-        </ul>
-      </nav>
-    </div>
-    
-  </header>
+  <!-- ヘッダー -->
+  <div id="header"></div>
 
   <main>
 
-    <div class="article">
+    <div class="section">
 
-      <h1>カッコの自動調整</h1>
+      <h1 class="section-text">カッコの自動調整</h1>
 
-      <h2>ソースコード</h2>
+      <h2 class="subsection-text">ソースコード</h2>
 
       <pre>
       <code class="language-tex">
@@ -77,7 +56,7 @@
       </code>
       </pre>
 
-      <h2>解説</h2>
+      <h2 class="subsection-text">解説</h2>
 
       <p>
         mathtoolsパッケージの便利なマクロ.
@@ -95,9 +74,38 @@
     </div>
   </main>
 
-  <footer>
-    <p><small>Copyright &copy;&nbsp; NOMOTO Keiichiro All Rights Reserved.</small></p>
-  </footer>
+  <!-- フッター -->
+  <div id="footer"></div>
+
+  <!-- ヘッダーとフッターの読み込み -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // ヘッダーとフッターの読み込み
+      Promise.all([
+        fetch("/header-footer/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector("#header").innerHTML = data;
+          }),
+        fetch("/header-footer/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector("#footer").innerHTML = data;
+          })
+      ]).then(initToggleMenu); // fetch完了後に初期化
+    });
+  
+    function initToggleMenu() {
+      const $button = document.querySelector('.toggle-menu-button');
+      const $menu = document.querySelector('.header-nav');
+      
+      if ($button && $menu) {
+        $button.addEventListener('click', function () {
+          $menu.classList.toggle('is-show');
+        });
+      }
+    }
+  </script>
 
 </body>
 

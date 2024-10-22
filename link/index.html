@@ -13,11 +13,11 @@
 
   <!-- 端末調整 -->
   <meta name="viewport" content="width=device-width">
-  <script src="../js/toggle-menu.js"></script>
 
   <!-- css -->
-  <link href="../css/common.css" rel="stylesheet">
-  <link href="../css/link.css" rel="stylesheet">
+  <link href="/css/common.css" rel="stylesheet">
+  <link href="/css/section.css" rel="stylesheet">
+  <link href="/css/link.css" rel="stylesheet">
 
   <!-- フォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,34 +27,14 @@
 
 <body>
 
-  <header>
-
-    <div class="header-top">
-      <a class="page-title" href="../index.html">NOMOTO's Official Website</a>
-      <button class="toggle-menu-button"></button>
-    </div>
-    
-    <div class="header-bottom">
-      <nav class="menu">
-        <ul>
-          <li><a href="../index.html">Top</a></li>
-          <li><a href="../profile/index.html">Profile</a></li>
-          <li><a href="../cv/index.html">CV</a></li>
-          <li><a href="../research/index.html">Research</a></li>
-          <li><a href="../education/index.html">Education</a></li>
-          <li><a href="../note/index.html">Note</a></li>
-          <li class="select"><a href="../link/index.html">Link</a></li>
-        </ul>
-      </nav>
-    </div>
-    
-  </header>
+  <!-- ヘッダー -->
+  <div id="header"></div>
 
   <main>
 
     <!-- 知人のリンク -->
-    <div class="link-category">
-      <h1>知人 (五十音順)</h1>
+    <div class="section">
+      <h1 class="section-text">知人 (五十音順)</h1>
       <ul>
         <li><a href="https://sites.google.com/view/taiga-adachi-japanese-ver">足立大雅 / ADACHI Taiga</a></li>
         <li><a href="https://r-s-2612.github.io/homepage/index_jp.html">椎井亮太 / SHII Ryota</a></li>
@@ -62,8 +42,8 @@
     </div>
 
     <!-- 研究ツールのリンク -->
-    <div class="link-category">
-      <h1>研究ツール</h1>
+    <div class="section">
+      <h1 class="section-text">研究ツール</h1>
       <dl>
         <dt><a href="https://arxiv.org/list/math.NT/recent">arXiv math.NT</a></dt>
         <dd>数学論文のプレプリント公開サーバ, の整数論のページ.</dd>
@@ -81,8 +61,8 @@
     </div>
 
     <!-- 便利ツールのリンク -->
-    <div class="link-category">
-      <h1>その他 便利ツール</h1>
+    <div class="section">
+      <h1 class="section-text">その他 便利ツール</h1>
       <dl>
 
         <dt><a href="https://doc.sagemath.org/html/en/reference/">Sage Reference Manual</a></dt>
@@ -102,9 +82,38 @@
 
   </main>
 
-  <footer>
-    <p><small>Copyright &copy;&nbsp; NOMOTO Keiichiro All Rights Reserved.</small></p>
-  </footer>
+  <!-- フッター -->
+  <div id="footer"></div>
+
+  <!-- ヘッダーとフッターの読み込み -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // ヘッダーとフッターの読み込み
+      Promise.all([
+        fetch("/header-footer/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector("#header").innerHTML = data;
+          }),
+        fetch("/header-footer/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector("#footer").innerHTML = data;
+          })
+      ]).then(initToggleMenu); // fetch完了後に初期化
+    });
+  
+    function initToggleMenu() {
+      const $button = document.querySelector('.toggle-menu-button');
+      const $menu = document.querySelector('.header-nav');
+      
+      if ($button && $menu) {
+        $button.addEventListener('click', function () {
+          $menu.classList.toggle('is-show');
+        });
+      }
+    }
+  </script>
 
 </body>
 

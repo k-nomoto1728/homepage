@@ -36,9 +36,9 @@ li {
   padding-left: 1em;
 }
 
-li::before {
+/* li::before {
   content: "・"
-}
+} */
 
 h1 {
   font-size: 24px;
@@ -55,26 +55,59 @@ p {
 
 /* ヘッダーのスタイル */
 
-header {
+/* .header {
   max-width: 1800px;
   height: 100px;
+} */
+
+.header-inner {
+  max-width: 1800px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header a {
+.header-inner a {
   text-decoration: none;
-  /* color: #FFFFFF; */
 }
 
-.header-top {
+.header-logo {
+  /* インライン要素(aタグ)からブロック要素へ変換 */
+  display: block;
+  width: 400px;
+  font-size: 28px;
+  text-align: center;
+  color: #000000;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.nav-item a {
+  color: #000000;
+}
+
+/* .header-top {
   display: flex;
   width: 100%;
   height: 60px;
   justify-content: center;
   position: relative;
   background-color: #FFFFFF;
-}
+} */
 
-.page-title {
+/* .site-logo {
   display: block;
   height: 60px;
   line-height: 60px;
@@ -82,7 +115,7 @@ header a {
   color: #000000;
   font-family: "RocknRoll One", sans-serif;
   font-family: "Kaisei Tokumin", serif;
-}
+} */
 
 .toggle-menu-button {
   position: absolute;
@@ -98,29 +131,28 @@ header a {
   outline: none;
 }
 
-.header-bottom {
+/* .header-nav {
   width: 100%;
   height: calc(100px - 60px);
   justify-content: center;
-  background-color: #00ABEA;
   font-family: "RocknRoll One", sans-serif;
 }
 
-.menu {
+.main-navigation {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
 }
 
-.menu ul {
+.nav-list {
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.menu ul li {
+.nav-item {
   width: 150px;
   height: 100%;
   font-size: 18px;
@@ -131,15 +163,11 @@ header a {
   line-height: 40px;
 }
 
-.menu ul li::before {
+.nav-item li::before {
   content: none;
 }
 
-.select {
-  background-color: #EBB400;
-}
-
-.menu ul li a {
+.nav-item a {
   display: block;
   position: absolute;
   top: 0;
@@ -148,11 +176,8 @@ header a {
   height: 100%;
   text-align: center;
   padding-left: 1em;
-}
+} */
 
-.menu ul li a {
-  color: #FFFFFF;
-}
 
 /* ボディのスタイル */
 
@@ -173,7 +198,7 @@ footer {
 
 }
 
-footer p {
+.footer p {
   font-size: 14px;
   line-height: 30px;
 }
@@ -211,7 +236,7 @@ footer p {
   
   /* ヘッダーのスタイル */
 
-  header {
+  .header {
     position: fixed;
     top: 0;
     left: 0;
@@ -221,19 +246,25 @@ footer p {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .header-top {
+  .header-inner {
     height: 50px;
   }
 
-  .page-title {
+  .header-logo {
     height: 50px;
     line-height: 50px;
     font-size: 18px;
   }
 
+  .nav-item {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
   /* ハンバーガーメニュー */
-  .header-bottom.is-show {
+  .header-nav.is-show {
     display: block;
+    padding-left: 0;
   }
 
   .toggle-menu-button {
@@ -242,26 +273,31 @@ footer p {
     height: 50px;
   }
 
-  .header-bottom {
-    height: calc(50px * 7);
+  .header-nav {
+    height: calc(50px * 6);
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     display: none;
+    background-color: #736E62;
   }
 
-  .menu ul {
+  .nav-list {
     display: block;
     text-align: center;
     width: 100%;
   }
 
-  .menu ul li {
+  .nav-item {
     height: 50px;
     width: 100%;
     font-size: 18px;
     line-height: 50px;
+  }
+
+  .nav-item a {
+    color: #ffffff;
   }
   
   /* メインのスタイル */
@@ -272,7 +308,7 @@ footer p {
   }
 
   /* フッターのレイアウト */
-  footer p {
+  .footer p {
     height: 30px;
     font-size: 10px;
   }
