@@ -16,9 +16,9 @@
   <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
   <!-- css -->
-  <link href="/css/common.css" rel="stylesheet">
-  <link href="/css/section.css" rel="stylesheet">
-  <link href="/css/note.css" rel="stylesheet">
+  <link href="../css/common.css" rel="stylesheet">
+  <link href="../css/section.css" rel="stylesheet">
+  <link href="../css/note.css" rel="stylesheet">
 
   <!-- フォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,14 +50,14 @@
     <div class="section">
       <h1 class="section-text">LaTeX</h1>
       <ul>
-        <li><a href="/note/latex/alphabet_font/index.html">アルファベットの書体(mathbb, mathcal, etc.)マクロ</a></li>
-        <li><a href="/note/latex/math_operator/index.html">数学作用素マクロ</a></li>
-        <li><a href="/note/latex/bracket/index.html">カッコの自動サイズ調整</a></li>
-        <li><a href="/note/latex/showonlyrefs/index.html">参照した数式だけ数式番号を表示</a></li>
-        <li><a href="/note/latex/tcolorbox/index.html">tcolorboxパッケージを用いたカラフルな定理環境(未執筆)</a></li>
-        <li><a href="/note/latex/latexmk/index.html">latexmk: 複数回のタイプセットを一度に実行してくれるツール(未執筆)</a></li>
-        <li><a href="/note/latex/vscode/index.html">VS codeでのlatex実行環境(未執筆)</a></li>
-        <li><a href="/note/latex/lualatex/index.html">lualatexの導入(未執筆)</a></li>
+        <li><a href="./latex/alphabet_font/index.html">アルファベットの書体(mathbb, mathcal, etc.)マクロ</a></li>
+        <li><a href="./latex/math_operator/index.html">数学作用素マクロ</a></li>
+        <li><a href="./latex/bracket/index.html">カッコの自動サイズ調整</a></li>
+        <li><a href="./latex/showonlyrefs/index.html">参照した数式だけ数式番号を表示</a></li>
+        <li><a href="./latex/tcolorbox/index.html">tcolorboxパッケージを用いたカラフルな定理環境(未執筆)</a></li>
+        <li><a href="./latex/latexmk/index.html">latexmk: 複数回のタイプセットを一度に実行してくれるツール(未執筆)</a></li>
+        <li><a href="./latex/vscode/index.html">VS codeでのlatex実行環境(未執筆)</a></li>
+        <li><a href="./latex/lualatex/index.html">lualatexの導入(未執筆)</a></li>
       </ul>
     </div>
 
@@ -71,12 +71,12 @@
     document.addEventListener('DOMContentLoaded', function () {
       // ヘッダーとフッターの読み込み
       Promise.all([
-        fetch("/header-footer/header.html")
+        fetch("../header-footer/header.html")
           .then((response) => response.text())
           .then((data) => {
             document.querySelector("#header").innerHTML = data;
           }),
-        fetch("/header-footer/footer.html")
+        fetch("../header-footer/footer.html")
           .then((response) => response.text())
           .then((data) => {
             document.querySelector("#footer").innerHTML = data;

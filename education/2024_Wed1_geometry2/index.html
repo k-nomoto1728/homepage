@@ -15,9 +15,9 @@
   <meta name="viewport" content="width=device-width">
 
   <!-- css -->
-  <link href="/css/common.css" rel="stylesheet">
-  <link href="/css/section.css" rel="stylesheet">
-  <link href="/css/education.css" rel="stylesheet">
+  <link href="../../css/common.css" rel="stylesheet">
+  <link href="../../css/section.css" rel="stylesheet">
+  <link href="../../css/education.css" rel="stylesheet">
 
   <!-- フォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,9 +37,9 @@
       <h2 class="subsection-text">第1回 2024/09/11</h2>
 
       <ul>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/01/slide.pdf">講義スライド</a></li>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/01/exercise.pdf">演習問題</a></li>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/01/answer.pdf">演習解答</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/01/slide.pdf">講義スライド</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/01/exercise.pdf">演習問題</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/01/answer.pdf">演習解答</a></li>
       </ul>
 
       <p>次週9/18は休講です.</p>
@@ -47,34 +47,34 @@
       <h2 class="subsection-text">第2回 2024/09/25</h2>
 
       <ul>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/02/slide.pdf">講義スライド</a></li>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/02/exercise.pdf">演習問題</a></li>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/02/answer.pdf">演習解答</a></li>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/02/remark.pdf">補足: CauchyーShwartzの不等式の証明</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/02/slide.pdf">講義スライド</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/02/exercise.pdf">演習問題</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/02/answer.pdf">演習解答</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/02/remark.pdf">補足: CauchyーShwartzの不等式の証明</a></li>
       </ul>
 
       <h2 class="subsection-text">第3回 2024/10/02</h2>
 
       <ul>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/03/slide.pdf">講義スライド</a></li>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/03/exercise.pdf">演習問題</a></li>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/03/answer.pdf">演習解答</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/03/slide.pdf">講義スライド</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/03/exercise.pdf">演習問題</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/03/answer.pdf">演習解答</a></li>
       </ul>
 
       <h2 class="subsection-text">第4回 2024/10/09</h2>
 
       <ul>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/04/slide.pdf">講義スライド</a></li>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/04/exercise.pdf">演習問題</a></li>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/04/answer.pdf">演習解答</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/04/slide.pdf">講義スライド</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/04/exercise.pdf">演習問題</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/04/answer.pdf">演習解答</a></li>
       </ul>
 
       <h2 class="subsection-text">第5回 2024/10/16</h2>
 
       <ul>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/05/slide.pdf">講義スライド</a></li>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/05/exercise.pdf">演習問題</a></li>
-        <li><a href="/pdf/meisei/2024_Wed1_geometry2/05/answer.pdf">演習解答</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/05/slide.pdf">講義スライド</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/05/exercise.pdf">演習問題</a></li>
+        <li><a href="../../pdf/meisei/2024_Wed1_geometry2/05/answer.pdf">演習解答</a></li>
       </ul>
 
       <p><font color="red">レポート(前半)を出します. 明星LMSの講義のページを確認してください. (提出締切: 2024/10/30)</font></p>
@@ -115,12 +115,12 @@
     document.addEventListener('DOMContentLoaded', function () {
       // ヘッダーとフッターの読み込み
       Promise.all([
-        fetch("/header-footer/header.html")
+        fetch("../../header-footer/header.html")
           .then((response) => response.text())
           .then((data) => {
             document.querySelector("#header").innerHTML = data;
           }),
-        fetch("/header-footer/footer.html")
+        fetch("../../header-footer/footer.html")
           .then((response) => response.text())
           .then((data) => {
             document.querySelector("#footer").innerHTML = data;
