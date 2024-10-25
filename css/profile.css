@@ -21,24 +21,28 @@
 
 @media (max-width: 800px) {
 
-  .category {
+  .section {
     display: block;
   }
 
-  .category-text {
+  .section-text {
     padding-right: 0;
   }
 
-  .reverse .category-text {
-    padding-left: 0;
+  .reverse {
+    padding-left: 0px;
   }
 
-  .category img {
+  .reverse .section-inner {
+    padding-left: 0px;
+  }
+
+  .section img {
     width: 100%;
     margin-top: 20px;
   }
 
-  .category-text h1 {
+  .section-text h1 {
     margin-bottom: 10px;
   }
 

@@ -16,11 +16,12 @@ ul, ol {
 
 body {
   background-color: #FFFFFF;
-  font-family: "Noto Sans JP", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
   max-width: 1800px;
+  /* font-family: "Shippori Mincho", serif; */
+  font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
 a {
@@ -70,6 +71,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
 }
 
 .header-inner a {
@@ -80,9 +82,10 @@ p {
   /* インライン要素(aタグ)からブロック要素へ変換 */
   display: block;
   width: 400px;
-  font-size: 28px;
+  font-size: 26px;
   text-align: center;
   color: #000000;
+  font-family: "Cinzel", serif;
 }
 
 .nav-list {
@@ -96,26 +99,8 @@ p {
 
 .nav-item a {
   color: #000000;
+  font-family: "Cinzel", serif;
 }
-
-/* .header-top {
-  display: flex;
-  width: 100%;
-  height: 60px;
-  justify-content: center;
-  position: relative;
-  background-color: #FFFFFF;
-} */
-
-/* .site-logo {
-  display: block;
-  height: 60px;
-  line-height: 60px;
-  font-size: 30px;
-  color: #000000;
-  font-family: "RocknRoll One", sans-serif;
-  font-family: "Kaisei Tokumin", serif;
-} */
 
 .toggle-menu-button {
   position: absolute;
@@ -130,54 +115,6 @@ p {
   border-radius: 0;
   outline: none;
 }
-
-/* .header-nav {
-  width: 100%;
-  height: calc(100px - 60px);
-  justify-content: center;
-  font-family: "RocknRoll One", sans-serif;
-}
-
-.main-navigation {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-list {
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-item {
-  width: 150px;
-  height: 100%;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  padding-left: 0;
-  position: relative;
-  line-height: 40px;
-}
-
-.nav-item li::before {
-  content: none;
-}
-
-.nav-item a {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  padding-left: 1em;
-} */
-
 
 /* ボディのスタイル */
 
