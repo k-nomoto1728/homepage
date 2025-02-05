@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+
+@media (max-width: 800px) {
+
+  .year h1 {
+    margin-bottom: 10px;
+  }
+
+}

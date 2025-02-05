@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <!-- 必須タグ -->
+  <meta charset="UTF-8">
+  <title>Tcolorbox | Note | NOMOTO Keiichiro</title>
+
+  <!-- 任意タグ -->
+  <meta name="author" content="野本慶一郎">
+  <meta name="description" content="">
+
+  <!-- 端末調整 -->
+  <meta name="viewport" content="width=device-width">
+  <script src="../../../js/toggle-menu.js"></script>
+
+  <!-- css -->
+  <link href="../../../css/style.css" rel="stylesheet">
+  <link href="../../../css/section.css" rel="stylesheet">
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&family=Noto+Sans+JP:wght@100..900&family=RocknRoll+One&display=swap" rel="stylesheet">
+
+  <!-- コードのシンタックスハイライト -->
+  <link rel="stylesheet" href="../../../css/vs2015.css">
+  <script src="../../../js/highlight.min.js"></script>
+  <script src="../../../js/languages/python.js"></script>
+  <script src="../../../js/languages/latex.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+  
+      <a class="header-logo" href="../../../index.html">Nomoto's Official Website</a>
+  
+      <button class="toggle-menu-button"></button>
+  
+      <div class="header-nav">
+        <nav class="main-navigation">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="../../../profile/index.html">Profile</a></li>
+            <li class="nav-item"><a href="../../../cv/index.html">CV</a></li>
+            <li class="nav-item"><a href="../../../research/index.html">Research</a></li>
+            <li class="nav-item"><a href="../../../education/index.html">Education</a></li>
+            <li class="nav-item"><a href="../../../note/index.html">Note</a></li>
+            <li class="nav-item"><a href="../../../link/index.html">Link</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+    </div>
+  </header>
+
+  <main>
+
+    <div class="section">
+
+      <h1 class="section-text">tcolorboxパッケージを用いたカラフルな定理環境</h1>
+
+      <h2 class="subsection-text">ソースコード</h2>
+
+      <pre>
+      <code class="language-tex">
+        \usepackage{tcolorbox}
+        \tcbuselibrary{theorems,skins,breakable}
+
+        \tcbset{
+          thmstyle/.style={
+            colframe=blue!50!black,
+            colback=blue!50!black!2!white,
+            colbacktitle=blue!50!black,
+            boxrule=0pt,
+            left*=1\zw,
+            right*=1\zw,
+            sharp corners,
+            before skip=1\zw,
+            after skip=1\zw,
+            before upper={\setlength{\parindent}{1\zw}},
+            breakable,
+          },
+          defstyle/.style={
+            colframe=red!50!black,
+            colback=red!50!black!2!white,
+            colbacktitle=red!50!black,
+            boxrule=0pt,
+            left*=1\zw,
+            right*=1\zw,
+            sharp corners,
+            before skip=1\zw,
+            after skip=1\zw,
+            before upper={\setlength{\parindent}{1\zw}},
+            breakable,
+          }
+        }
+
+        \newtcbtheorem{thm}{Theorem}{thmstyle}{thm}
+        \newtcbtheorem{defi}{Definition}{defstyle}{defi}
+      </code>
+      </pre>
+
+      <h2 class="subsection-text">解説</h2>
+
+      <!-- <p>
+        一行目は言わずもがな, tcolorboxパッケージの読み込みである.
+        tcolorboxは名前の通り, 色付きのboxを出力するパッケージである.
+        そのため, 定理環境を作るためには新たなライブラリを読み込む必要がある.
+        それを二行目で行っている.
+        `theorems`以外のライブラリには例えば次のようなものがある.
+
+        * ページ跨ぎを許す`breakble`.
+
+        * 定理環境の囲みの見た目を変える`skins`.
+      </p>
+
+      <p>
+        定理環境の設定は,  `\newtcbtheorem{<name>}{<display name>}{<options>}{<prefix>}`という形で記述する.
+
+        `<name>`には定理環境の名前そのものを指定する.
+        したがって上では`mythm`と指定しているので, 本文中では`\begin{mythm} \end{mythm}`のように書くことになる.
+        
+        `<display name>`には表示名を指定する.
+        和文ならば`定理`, 欧文なら`Theorem`等が妥当だろうか.
+        
+        `<options>`には様々なオプションを指定する.
+        上のソースコードを見てもらえば分かる通り, 空白にすれば必要最低限の定理環境が得られる.
+        オプションはかなりの種類があるので, 本記事では紹介しきれない. 気になる方は公式ドキュメントを見ていただきたい.
+        
+        `<prefix>`には, prefix(接頭辞)を指定する.
+        例えばprefixを`thm`と, ある定理のラベルを`hoge`と指定すれば,
+        その定理(番号)は`\ref{thm:hoge}`と記述することで引用できる.
+      </p>
+
+      <p>
+        実際の定理環境は`\begin{<name>}{<display name>}{<options>}{<label name>} \end{<name>}`という形で記述する.
+      </p>
+
+      <p>
+        これで綺麗な定理環境が出力できるようになった.
+        とすれば, 定理だけでなく, 定義・例・補題・命題・系・注意・予想, といった環境を作りたい.
+        しかし, それら一つ一つに対して`\newtcbtheorem{defi}{My Def}{<大量のオプション>}{defi}`と書いていくのは,
+        プリアンブルが汚くなったり, 見づらくなったりといった問題点がある.
+        この問題点を解決するために, オプションテンプレートを作ることにする.
+
+        オプションテンプレートの作り方は簡単で, プリアンブルに`\tcbset{<options>}`と書くだけである. 例えば次のソースコードをタイプセットすれば, 確かに定理環境が変化しているのが分かるだろう.
+      </p> -->
+
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p class="footer-text">
+      <small>Copyright &copy;&nbsp; NOMOTO Keiichiro All Rights Reserved.</small>
+    </p>
+  </footer>
+
+</body>
+
+</html>

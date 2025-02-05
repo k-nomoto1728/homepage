@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <!-- 必須タグ -->
+  <meta charset="UTF-8">
+  <title>Latexmk | Note | NOMOTO Keiichiro</title>
+
+  <!-- 任意タグ -->
+  <meta name="author" content="野本慶一郎">
+  <meta name="description" content="ノート">
+
+  <!-- 端末調整 -->
+  <meta name="viewport" content="width=device-width">
+  <script src="../../../js/toggle-menu.js"></script>
+
+  <!-- css -->
+  <link href="../../../css/style.css" rel="stylesheet">
+  <link href="../../../css/section.css" rel="stylesheet">
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&family=Noto+Sans+JP:wght@100..900&family=RocknRoll+One&display=swap" rel="stylesheet">
+
+  <!-- コードのシンタックスハイライト -->
+  <link rel="stylesheet" href="../../../css/vs2015.css">
+  <script src="../../../js/highlight.min.js"></script>
+  <script src="../../../js/languages/python.js"></script>
+  <script src="../../../js/languages/latex.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+  
+      <a class="header-logo" href="../../../index.html">Nomoto's Official Website</a>
+  
+      <button class="toggle-menu-button"></button>
+  
+      <div class="header-nav">
+        <nav class="main-navigation">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="../../../profile/index.html">Profile</a></li>
+            <li class="nav-item"><a href="../../../cv/index.html">CV</a></li>
+            <li class="nav-item"><a href="../../../research/index.html">Research</a></li>
+            <li class="nav-item"><a href="../../../education/index.html">Education</a></li>
+            <li class="nav-item"><a href="../../../note/index.html">Note</a></li>
+            <li class="nav-item"><a href="../../../link/index.html">Link</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+    </div>
+  </header>
+
+  <main>
+
+    <div class="section">
+
+      <h1 class="section-text">latexmkの導入</h1>
+
+      <h2 class="subsection-text">latexmkを使う理由</h2>
+
+      <p>
+        latexmk(ラテフメイク)は例えば以下のような問題を解決してくれるソフトである.
+      </p>
+        <ul>
+          <li>ラベルをpdfに反映させるためにタイプセットを何回かするのめんどくさい</li>
+          <li>参考文献を引用する際にpLaTeXとbibtexを何回かタイプセットするのがめんどくさい</li>
+          <li>texファイルとpdfファイルだけしか必要としないのに, auxファイルとかdviファイルとかいらない.</li>
+        </ul>
+      <p>
+        latexmkを使用すれば, 一度のタイプセットでpLaTeXやbibtex等, 正しい出力がなされるまで自動的に複数回タイプセットしてくれる.
+        また, オプションの設定を行うことで, 不必要な補助ファイルを一気に削除してくれる.
+        ここでは私が使用しているlatexmkの設定と, 簡単な解説を記しておく.
+      </p>
+
+      <h2 class="subsection-text">.latexmkrcの設定</h2>
+
+      <p>
+        まずはテキストエディットを開き, 新規書類を作成する.
+        中身は一旦何も書かず, ファイル名を.latexmkrcと変更し, 自分のユーザー名のディレクトリに保存する(書類とかムービーとかのフォルダがあるとこ).
+        ただし, 拡張子が非表示になっていて実は.latexmkrc.txtのようなファイル名になっている, なんてことがあれば, .txtの部分を消す.
+        次にファインダーを開き, ユーザーのディレクトリに移動する.
+        そして[Shift]+[Command]+[.]を押すことで,  隠しフォルダを表示させる. (もう一度押せば非表示になる)
+        先ほど作成した.latexmkrcファイルがあると思うので, ダブルクリックして開く.
+        そこに, latexmkの設定を自由に記述して保存すれば設定完了.
+        私は以下のように設定している.
+      </p>
+
+      <pre>
+      <code class="language-tex">
+        #!/usr/bin/env perl
+        # file          .latexmkrc
+        # author        Keiichiro Nomoto
+        # created_at    2022.06.11
+        # modified_at   2023.07.14
+
+        $latex = 'uplatex %O -kanji=utf8 -synctex=1 -interaction=nonstopmode -file-line-error %S';
+        $lualatex = 'lualatex %O -synctex=1 -interaction=nonstopmode -file-line-error %S';
+        $bibtex = 'upbibtex %O %B';
+        $dvipdf = 'dvipdfmx %O -o %D %S';
+        $pdf_mode = 3;
+        $max_repeat = 5;
+        $pvc_view_file_via_temporary = 0;
+      </code>
+      </pre>
+
+      <h2 class="subsection-text">$latex変数</h2>
+
+      <pre>
+      <code class="language-tex">
+        $latex            = 'platex -synctex=1 -interaction=nonstopmode -file-line-error %O %S';
+      </code>
+      </pre>
+
+      <p>
+        まずは拡張子texのファイルから拡張子dviのファイルを作成するための処理系の設定を行う.
+        基本的に私はlatexの中ではupLaTeXを使用するので
+      </p>
+
+      <pre>
+      <code class="language-tex">
+        $latex            = 'platex %O %S';
+      </code>
+      </pre>
+
+      <p>
+        と書き込む.
+        ここで, %Oというのは実行時オプション, %Sというのは入力ファイル名を表す.
+        つまり, 何かpLaTeXで処理を行う際に付けるオプションが%Oに, 実行するファイル名が%Sに代入される.
+        しかし毎回付けるオプションもあるので, それは固定しておく.
+        それが-synctex=1 -interaction=nonstopmode -file-line-errorの部分である.
+      </p>
+      <ul>
+        <li>synctex: 1に設定するとSyncTeXが有効になり, 適切なpdf viewerを用いることでpdfの文章から該当するソースコードに飛べたりする.</li>
+        <li>interaction=nonstopmode: タイプセット中にエラーが起きても、ユーザーにどう処理するかの指示を求めずコンパイルを続行する.</li>
+        <li>file-line-error: texファイルの何行目でエラーが発生したかを表示.</li>
+      </ul>
+      
+      <h2 class="subsection-text">$bibtex変数</h2>
+
+      <pre>
+      <code class="language-tex">
+        $bibtex           = 'pbibtex -kanji=utf8 %O %S';
+      </code>
+      </pre>
+
+      <p>
+        bibtexを実行する際の設定.
+        日本語の参考文献も引用することがあるので, 処理系はpbibtexにする.
+        また, オプションのkanji=utf8を設定しておく.
+      </p>
+
+      <h2 class="subsection-text">$dvipdf変数</h2>
+
+      <pre>
+      <code class="language-tex">
+        $dvipdf           = 'dvipdfmx %O -o %D %S';
+      </code>
+      </pre>
+
+      <p>
+        拡張子.dviのファイルから拡張子.pdfのファイルを作成するためのコマンドの設定.
+        標準なものであるdvipdfmxに設定をすれば十分.
+      </p>
+    
+      <h2 class="subsection-text">$pdf_mode変数</h2>
+
+      <pre>
+      <code class="language-tex">
+        $pdf_mode         = 3;
+      </code>
+      </pre>
+
+      <p>
+        使用するコマンドによってpdfの出力形式を合わせる設定.
+      </p>
+      <ul>
+        <li>0: pdf化しない</li>
+        <li>1: $pdflatex変数で指定されたコマンドを使う</li>
+        <li>2: $ps2pdf変数で指定されたコマンドを使う</li>
+        <li>3: $dvipdf変数で指定されたコマンドを使って, dviファイルからpdfを作成する</li>
+        <li>4: $lualatexでpdfを作成する</li>
+        <li>5: $xelatexでpdfを作成する</li>
+      </ul>
+      <p>
+        先ほどの$dvipdf変数で設定したコマンドを使いたいので, ここでは3に設定する.
+      </p>
+
+      <h2 class="subsection-text">$max_repeat変数</h2>
+
+      <pre>
+      <code class="language-tex">
+        $max_repeat       = 5;
+      </code>
+      </pre>
+
+      <p>
+        最大タイプセット回数を指定. 警告が出なくなるまで無限にタイプセットを繰り返される可能性を防ぐ.
+      </p>
+
+      <h2 class="subsection-text">$latexmkの使い方</h2>
+
+      <p>
+        1. 適当にtest.texというファイルを作成する. (適当に中身を書いていてもよい)
+        2. ターミナルを開き, test.texがあるディレクトリ上で以下を実行する.
+      </p>
+
+      <pre>
+      <code class="language-tex">
+        latexmk test.tex
+      </code>
+      </pre>
+
+      <p>
+        そのディレクトリ上でtest.dvi, test.aux, test.pdf等のファイルが作成される.
+        また, オプションを付けて実行することで様々な機能を使用することができる. 例えば
+      </p>
+
+      <pre>
+      <code class="language-tex">
+        latexmk -c test.tex
+      </code>
+      </pre>
+
+      <p>
+        と実行すると, test.dviやtest.aux等の中間生成ファイルを削除してくれる.
+        しかし一度のタイプセットで済むのはいいが, ターミナル上で実行するのがめんどくさい.
+        なのでこれらの設定をVisual Studio Codeに反映させて, そちらで執筆環境を構築する方が楽である.
+        <a href="note/latex/vscode/index.html">VS codeでのlatex実行環境(未執筆)</a>
+      </p>
+
+    </div>
+      
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p class="footer-text">
+      <small>Copyright &copy;&nbsp; NOMOTO Keiichiro All Rights Reserved.</small>
+    </p>
+  </footer>
+
+</body>
+
+</html>

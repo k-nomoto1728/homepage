@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+/* ########################################
+セクションデザイン
+######################################## */
+
+.section {
+  /* レイアウト */
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+
+  /* バックグラウンド */
+  background-color: #FFFFFF;
+}
+
+.section ul,
+.section ol {
+  /* 箇条書きを枠内にする */
+  list-style-position: inside;
+}
+
+.section-inner {
+  /* レイアウト */
+  height: 100%;
+  width: 100%;
+  padding-right: 30px;
+}
+
+.section-text {
+  /* レイアウト */
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+  border-left: 8px solid #00ABEA;
+
+  /* バックグラウンド */
+  background-color: #f8ffff;
+}
+
+.subsection-text {
+  /* レイアウト */
+  border-bottom: 1px solid #00ABEA;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+}
+
+
+
+@media (max-width: 800px) {
+
+  .category {
+    display: block;
+  }
+
+  .category-text {
+    padding-right: 0;
+  }
+
+  .reverse .category-text {
+    padding-left: 0;
+  }
+
+  .category img {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .category-text h1 {
+    margin-bottom: 10px;
+  }
+
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <!-- 必須タグ -->
+  <meta charset="UTF-8">
+  <title>Bracket | Note | NOMOTO Keiichiro</title>
+
+  <!-- 任意タグ -->
+  <meta name="author" content="野本慶一郎">
+  <meta name="description" content="">
+
+  <!-- 端末調整 -->
+  <meta name="viewport" content="width=device-width">
+  <script src="../../../js/toggle-menu.js"></script>
+
+  <!-- css -->
+  <link href="../../../css/style.css" rel="stylesheet">
+  <link href="../../../css/section.css" rel="stylesheet">
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&family=Noto+Sans+JP:wght@100..900&family=RocknRoll+One&display=swap" rel="stylesheet">
+
+  <!-- コードのシンタックスハイライト -->
+  <link rel="stylesheet" href="../../../css/vs2015.css">
+  <script src="../../../js/highlight.min.js"></script>
+  <script src="../../../js/languages/python.js"></script>
+  <script src="../../../js/languages/latex.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+  
+      <a class="header-logo" href="../../../index.html">Nomoto's Official Website</a>
+  
+      <button class="toggle-menu-button"></button>
+  
+      <div class="header-nav">
+        <nav class="main-navigation">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="../../../profile/index.html">Profile</a></li>
+            <li class="nav-item"><a href="../../../cv/index.html">CV</a></li>
+            <li class="nav-item"><a href="../../../research/index.html">Research</a></li>
+            <li class="nav-item"><a href="../../../education/index.html">Education</a></li>
+            <li class="nav-item"><a href="../../../note/index.html">Note</a></li>
+            <li class="nav-item"><a href="../../../link/index.html">Link</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+    </div>
+  </header>
+
+  <main>
+
+    <div class="section">
+
+      <h1 class="section-text">カッコの自動調整</h1>
+
+      <h2 class="subsection-text">ソースコード</h2>
+
+      <pre>
+      <code class="language-tex">
+        \DeclarePairedDelimiter{\skakko}{\lparen}{\rparen} % 括弧( )
+        \DeclarePairedDelimiter{\mkakko}{\lbrace}{\rbrace} % 括弧{ }
+        \DeclarePairedDelimiter{\lkakko}{\lbrack}{\rbrack} % 括弧[ ]
+        \DeclarePairedDelimiter{\gkakko}{\langle}{\rangle} % 括弧〈 〉
+        \DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % 絶対値| |
+        \DeclarePairedDelimiterX{\set}[2]{\lbrace}{\rbrace}{#1\,\delimsize\vert\,#2} % 集合{ }
+      </code>
+      </pre>
+
+      <h2 class="subsection-text">解説</h2>
+
+      <p>
+        mathtoolsパッケージの便利なマクロ.
+        通常は括弧の大きさを調整するには\left( 式 \right)と記述するが,
+        このマクロを書いておくと, \skakko*{式}と書くだけで括弧の大きさを調節してくれる.
+        \mkakko, \lkakko, \gkakko, \absも同様である.
+        ちなみにskakkoは「small kakko」の略である. 
+        \gkakkoは生成元を記述するときに使うことが多いので
+        「generator kakko」の略として命名している.
+        絶対他に最適な命名があるはずなので良い案があれば教えてください.
+        また, 集合を\mkakko*{元\mid 条件}のように書くと, 中身によっては縦線\midが適切な大きさになってくれない.
+        そこで上のように\setを定義すると, \set{元}{条件}と書くことで縦線\midが自動的に挿入され, 適切な大きさで表示してくれる.
+      </p>
+
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p class="footer-text">
+      <small>Copyright &copy;&nbsp; NOMOTO Keiichiro All Rights Reserved.</small>
+    </p>
+  </footer>
+
+</body>
+
+</html>

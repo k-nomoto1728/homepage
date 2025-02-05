@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+
+.section dt {
+  float: left;
+}
+
+.section dt::after {
+  content: ":";
+  margin-right: 5px;
+}
+
+
+@media (max-width: 800px) {
+
+  .CV-content h1 {
+    margin-bottom: 10px;
+  }
+
+}

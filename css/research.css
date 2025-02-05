@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+@media (max-width: 800px) {
+
+  .research-content h1 {
+    margin-bottom: 10px;
+  }
+
+}

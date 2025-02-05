@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+/* ########################################
+ブラウザの既定スタイル解除
+######################################## */
+
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  /* 配置確認用 */
+  /* border: 1px red dashed; */
+}
+
+/* ########################################
+基本スタイル(共通要素)
+######################################## */
+
+/* ボディ */
+body {
+  /* レイアウト */
+  max-width: 1800px;
+  background-color: #FFFFFF;
+
+  /* タイポグラフィ */
+  font-family: "Kaisei Tokumin", serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+/* リンク */
+a {
+  color: #3F72AF;
+}
+
+/* 画像 */
+img {
+  max-width: 100%;
+}
+
+/* リスト */
+li {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+/* ########################################
+見出し・テキスト要素
+######################################## */
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+
+/* ########################################
+ヘッダー(全体)
+######################################## */
+
+.header-inner {
+  /* レイアウト */
+  max-width: 1800px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  /* レイアウト(フレックスボックス) */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* 背景色 */
+  background-color: #ffffff;
+}
+
+/* ヘッダー内リンク */
+.header-inner a {
+  text-decoration: none;
+}
+
+/* ########################################
+ヘッダー(ロゴ)
+######################################## */
+
+.header-logo {
+  /* インライン要素(aタグ)からブロック要素へ変換 */
+  display: block;
+  width: 400px;
+
+  /* タイポグラフィ */
+  font-size: 26px;
+  text-align: center;
+  color: #000000;
+  font-family: "Cinzel", serif;
+}
+
+/* ########################################
+ヘッダー(ナビゲーション)
+######################################## */
+
+/* ナビゲーションリスト */
+.nav-list {
+  display: flex;
+}
+
+/* ナビゲーションアイテム */
+.nav-item {
+  /* レイアウト */
+  margin-left: 20px;
+  margin-right: 20px;
+
+  /* スタイル */
+  list-style: none;
+}
+
+/* ナビゲーションリンク */
+.nav-item a {
+  color: #000000;
+  font-family: "Cinzel", serif;
+}
+
+/* ########################################
+ヘッダー(ハンバーガーメニュー, レスポンジブ用)
+######################################## */
+.toggle-menu-button {
+  /* 位置調整 */
+  position: absolute;
+  right: 0;
+  display: none;
+
+  /* 背景画像 */
+  background-image: url("../img/common/icon-menu.png?raw=true");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  /* ボーダー設定 */
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+/* ########################################
+ボディ
+######################################## */
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ########################################
+フッター
+######################################## */
+
+footer {
+  /* レイアウト */
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* 配置(フレックスボックス) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* タイポグラフィ */
+  color: #000000;
+}
+
+/* フッター内テキスト */
+.footer p {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+/* ########################################
+レスポンシブデザイン
+######################################## */
+
+@media (max-width: 800px) {
+
+  /* ########################################
+  主なタグ
+  ######################################## */
+
+  body {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+  
+  h2 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  ul, dl, ol {
+    line-height: 1.8;
+  }
+
+  li, dt, dd {
+    font-size: 12px;
+  }
+  
+  /* ########################################
+  ヘッダー
+  ######################################## */
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 10;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-inner {
+    height: 50px;
+  }
+
+  .header-logo {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  /* ハンバーガーメニュー */
+  .header-nav.is-show {
+    display: block;
+    padding-left: 0;
+  }
+
+  .toggle-menu-button {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+
+  .header-nav {
+    height: calc(50px * 6);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    background-color: #736E62;
+  }
+
+  .nav-list {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-item {
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 50px;
+  }
+
+  .nav-item a {
+    color: #ffffff;
+  }
+  
+  /* ########################################
+  ボディ
+  ######################################## */
+
+  main {
+    max-width: 800px;
+    padding-top: 50px;
+  }
+
+  /* ########################################
+  フッター
+  ######################################## */
+  .footer p {
+    height: 30px;
+    font-size: 10px;
+  }
+
+}
