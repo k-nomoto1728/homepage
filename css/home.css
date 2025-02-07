@@ -92,7 +92,7 @@
 .news-container {
   /* レイアウト */
   max-width: 80%;
-  height: calc(100vh - 100px - 250px - 90px - 30px);
+  height: calc(100vh - 100px - 250px - 90px - 30px - 1px);
   margin-left: auto;
   margin-right: auto;
 
