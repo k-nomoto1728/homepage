@@ -1,130 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
-  
-  <!-- 必須タグ -->
   <meta charset="UTF-8">
-  <title>Profile | NOMOTO Keiichiro</title>
-
-  <!-- 任意タグ -->
-  <meta name="author" content="野本慶一郎">
-  <meta name="description" content="">
-
-  <!-- 端末調整 -->
-  <meta name="viewport" content="width=device-width">
-  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-  <script src="../js/toggle-menu.js"></script>
-
-  <!-- css -->
-  <link href="../css/style.css" rel="stylesheet">
-  <link href="../css/section.css" rel="stylesheet">
-  <link href="../css/profile.css" rel="stylesheet">
-
-  <!-- フォント -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Shippori+Mincho&family=Zen+Kaku+Gothic+New&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomoto Keiichiro - 移転のお知らせ</title>
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+      text-align: center;
+    }
+    .container {
+      padding: 2rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
+    <h1>Nomoto Keiichiroのホームページは移転しました</h1>
+    <p>新しいサイトはこちらです：</p>
+    <p><a href="https://k-nomoto1728.com">https://k-nomoto1728.com</a></p>
+    <p>5秒後に自動的に新サイトへジャンプします。</p>
+  </div>
 
-  <!-- ヘッダー -->
-  <header class="header">
-    <div class="header-inner">
-  
-      <a class="header-logo" href="../index.html">Nomoto's Official Website</a>
-  
-      <button class="toggle-menu-button"></button>
-  
-      <div class="header-nav">
-        <nav class="main-navigation">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="../profile/index.html">Profile</a></li>
-            <li class="nav-item"><a href="../cv/index.html">CV</a></li>
-            <li class="nav-item"><a href="../research/index.html">Research</a></li>
-            <li class="nav-item"><a href="../education/index.html">Education</a></li>
-            <li class="nav-item"><a href="../note/index.html">Note</a></li>
-            <li class="nav-item"><a href="../link/index.html">Link</a></li>
-          </ul>
-        </nav>
-      </div>
-  
-    </div>
-  </header>
-
-  <!-- メインコンテンツ -->
-  <main>
-    
-    <!-- 基本プロフィール -->
-    <div class="section">
-      <div class="section-inner">
-        <h1 class="section-text">基本プロフィール</h1>
-        <p>
-          名前: 野本 慶一郎<br>
-          生年月日: 1995年9月8日<br>
-          出身: 愛知県豊田市<br>
-          連絡先: nomotokeiichiro"at"gmail.com<br>
-          学位: 博士(数理学) (2023年3月 九州大学)
-        </p>
-      </div>
-      <img src="../img/profile/face.jpg" alt="顔写真">
-    </div>
-
-    <!-- 研究 -->
-    <div class="section reverse">
-      <div class="section-inner">
-        <h1 class="section-text">研究</h1>
-        <p>
-          研究テーマは主に整数論と同種写像暗号.
-          整数論の中でも特にBirch and Swinnerton-Dyer予想周辺に興味があり,
-          楕円曲線の\(L\)関数の特殊値を保型形式等の解析的な道具を用いて調べることが好き.
-        </p>
-      </div>
-      <img src="../img/profile/math.jpg" alt="論文の写真">
-    </div>
-
-    <!-- ビール -->
-    <div class="section">
-      <div class="section-inner">
-        <h1 class="section-text">ビール</h1>
-        <p>
-          大学時代, バイト先の先輩にキャスティールというベルギービールを教わり, そこからベルギービール沼にハマった.
-          もちろんベルギーに限らず世界中のビールが大好き.
-        </p>
-        <p>
-          各国のビールが飲める最もおすすめのお店は福岡県の中洲にある
-          <a class="link" href="https://tabelog.com/fukuoka/A4001/A400102/40004877/">コットン・フィールズ</a>
-          というお店. タコスとスペアリブが絶品なので, 訪れた際には是非食べてみてほしい.
-        </p>
-      </div>
-      <img src="../img/profile/beer.jpg" alt="ビールの写真">
-    </div>
-
-    <!-- ルービックキューブ -->
-    <div class="section reverse">
-      <div class="section-inner">
-        <h1 class="section-text">ルービックキューブ</h1>
-        <p>
-          当時中学3年生のとある日, 自室に帰ると何故か新品のルービックキューブが置いてあった(たぶん父親が買ってきた).
-          付属の説明書を参考にしながらではあるが初めて6面を揃えられたことに感動し,
-          高速に揃える方法や他のサイズのルービックキューブ等に手を出し始めてしまう.
-          高校生くらいの頃には15秒程度で揃えられたはずだが, 今では忘れてしまった手順も多く40~50秒もかかってしまう.
-          だんだん早く揃えることに対する追求心が減り, 作業に集中する際の手遊び用になってしまっているのが現状.
-        </p>
-      </div>
-      <img src="../img/profile/rubic_cube.jpg" alt="ルービックキューブの写真">
-    </div>
-
-  </main>
-
-  <!-- フッター -->
-  <footer class="footer">
-    <p class="footer-text">
-      <small>Copyright &copy;&nbsp; NOMOTO Keiichiro All Rights Reserved.</small>
-    </p>
-  </footer>
-
+  <meta http-equiv="refresh" content="5;url=https://k-nomoto1728.com">
 </body>
 
 </html>

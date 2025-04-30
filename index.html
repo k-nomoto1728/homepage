@@ -1,174 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
-
-  <!-- 必須タグ -->
   <meta charset="UTF-8">
-  <title>NOMOTO Keiichiro</title>
-
-  <!-- 任意タグ -->
-  <meta name="author" content="野本慶一郎">
-  <meta name="description" content="">
-
-  <!-- 端末調整 -->
-  <meta name="viewport" content="width=device-width">
-  <script src="./js/toggle-menu.js"></script>
-  
-  <!-- css -->
-  <link href="./css/style.css" rel="stylesheet">
-  <link href="./css/home.css" rel="stylesheet">
-
-  <!-- フォント -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Shippori+Mincho&family=Zen+Kaku+Gothic+New&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomoto Keiichiro - 移転のお知らせ</title>
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+      text-align: center;
+    }
+    .container {
+      padding: 2rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
+    <h1>Nomoto Keiichiroのホームページは移転しました</h1>
+    <p>新しいサイトはこちらです：</p>
+    <p><a href="https://k-nomoto1728.com">https://k-nomoto1728.com</a></p>
+    <p>5秒後に自動的に新サイトへジャンプします。</p>
+  </div>
 
-  <!-- ヘッダー -->
-  <header class="header">
-    <div class="header-inner">
-  
-      <a class="header-logo" href="./index.html">Nomoto's Official Website</a>
-  
-      <button class="toggle-menu-button"></button>
-  
-      <div class="header-nav">
-        <nav class="main-navigation">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="./profile/index.html">Profile</a></li>
-            <li class="nav-item"><a href="./cv/index.html">CV</a></li>
-            <li class="nav-item"><a href="./research/index.html">Research</a></li>
-            <li class="nav-item"><a href="./education/index.html">Education</a></li>
-            <li class="nav-item"><a href="./note/index.html">Note</a></li>
-            <li class="nav-item"><a href="./link/index.html">Link</a></li>
-          </ul>
-        </nav>
-      </div>
-  
-    </div>
-  </header>
-
-  <!-- メインコンテンツ -->
-  <main class="main">
-
-    <!-- プロフィール情報 -->
-    <div class="profile-container">
-        <p class="profile-name">野本 慶一郎 / NOMOTO Keiichiro</p>
-      <div class="profile-details">
-          <p class="research-keywords">研究キーワード: 整数論, Birch and Swinnerton-Dyer予想, 楕円曲線, <i>L</i> 関数, 保型形式, 同種写像暗号</p>
-          <p class="contact-info">連絡先: nomotokeiichiro"at"gmail.com</p>
-      </div>
-    </div>
-
-    <!-- お知らせ -->
-    <h1 class="news-title">News</h1>
-    <div class="news-container">
-
-      <!-- 各ニュース -->
-      <div class="news-item">
-        <div class="news-date">
-          <p>2025.04.19</p>
-        </div>
-        <div class="news-content">
-          <p><a href="https://sites.google.com/view/tmu-nt/">都立大整数論セミナー</a>で講演しました. <a href="./pdf/research/都立大整数論セミナー.pdf">講演スライド</a></p>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-date">
-          <p>2024.10.22</p>
-        </div>
-        <div class="news-content">
-          <p>ホームページのデザインを全体的に改装中です.</p>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-date">
-          <p>2024.09.01</p>
-        </div>
-        <div class="news-content">
-          <p>EDUCATIONのページを作成しました. CVのページも一部更新しました.</p>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-date">
-          <p>2024.08.15</p>
-        </div>
-        <div class="news-content">
-          <p>Google検索に表示されるようにしました.</p>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-date">
-          <p>2024.07.03</p>
-        </div>
-        <div class="news-content">
-          <p>ページバランスの微調整等を行いました.</p>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-date">
-          <p>2024.06.30</p>
-        </div>
-        <div class="news-content">
-          <p>ページデザインを大幅に変更しました.</p>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-date">
-          <p>2024.06.21</p>
-        </div>
-        <div class="news-content">
-          <p>Researchのページを作成しました.</p>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-date">
-          <p>2024.06.18</p>
-        </div>
-        <div class="news-content">
-          <p>CVのページを作りました.</p>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-date">
-          <p>2024.06.16</p>
-        </div>
-        <div class="news-content">
-          <p>Linkのページを作りました.</p>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-date">
-          <p>2024.06.14</p>
-        </div>
-        <div class="news-content">
-          <p>ホームページを作りました.</p>
-        </div>
-      </div>
-  
-    </div>
-
-  </main>
-
-  <!-- フッター -->
-  <footer class="footer">
-    <p class="footer-text">
-      <small>Copyright &copy;&nbsp; NOMOTO Keiichiro All Rights Reserved.</small>
-    </p>
-  </footer>
-  
+  <meta http-equiv="refresh" content="5;url=https://k-nomoto1728.com">
 </body>
 
 </html>
